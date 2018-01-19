@@ -1,0 +1,27 @@
+@import './variables/variables.scss';
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin: 0 0 60px 0;
+  padding: 0;
+  background: $background !important;
+  font-family: "Open Sans", arial, sans-serif;
+  color: $font-primary;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px; /* Set the fixed height of the footer here */
+  line-height: 80px; /* Vertically center the text there */
+  background-color: $background;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+

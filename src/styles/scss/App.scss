@@ -1,0 +1,81 @@
+@import './variables/variables.scss';
+// =mobile
+//     @media screen and (max-width: $tablet - 1px)
+//         @content
+
+// =tablet
+//     @media screen and (min-width: $tablet), print
+//         @content
+        
+// =tablet-only
+//     @media screen and (min-width: $tablet) and (max-width: $desktop - 1px)
+//         @content
+        
+// =desktop
+//     @media screen and (min-width: $desktop)
+//         @content
+        
+// =desktop-only
+//     @media screen and (min-width: $desktop) and (max-width: $widescreen - 1px)
+//         @content
+ 
+*:focus {
+  outline: none;
+  outline-style: none;
+}
+
+section {
+  padding: 2rem 1.5rem !important;
+}
+
+h1, h2 {
+  font-weight: normal;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+a {
+  color: #42b983;
+}
+
+.is-white-bg {
+  background: #fff;
+}
+
+.is-dark-bg {
+  background: #777;
+}
+
+button.is-primary {
+  background: none;
+  border: 1px solid #fff;
+  &:hover{
+    background: #fff;
+    color: #333;
+  }
+}
+
+input:focus, textarea:focus {
+    border-color: transparent;
+    -webkit-box-shadow: 0 0 0 0.125em rgba(0,0,0,0.2);
+    box-shadow: 0 0 0 0.125em rgba(0,0,0,0.2);
+}
+
+.logo {
+
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem; 
+  img {
+    width: 200px;
+    height: 100%;
+  }
+}
