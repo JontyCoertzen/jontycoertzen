@@ -2,23 +2,18 @@
 // =mobile
 //     @media screen and (max-width: $tablet - 1px)
 //         @content
-
 // =tablet
 //     @media screen and (min-width: $tablet), print
 //         @content
-        
 // =tablet-only
 //     @media screen and (min-width: $tablet) and (max-width: $desktop - 1px)
 //         @content
-        
 // =desktop
 //     @media screen and (min-width: $desktop)
 //         @content
-        
 // =desktop-only
 //     @media screen and (min-width: $desktop) and (max-width: $widescreen - 1px)
 //         @content
- 
 *:focus {
   outline: none;
   outline-style: none;
@@ -28,7 +23,8 @@ section {
   padding: 2rem 1.5rem !important;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 
@@ -57,25 +53,162 @@ a {
 button.is-primary {
   background: none;
   border: 1px solid #fff;
-  &:hover{
+  &:hover {
     background: #fff;
     color: #333;
   }
 }
 
-input:focus, textarea:focus {
-    border-color: transparent;
-    -webkit-box-shadow: 0 0 0 0.125em rgba(0,0,0,0.2);
-    box-shadow: 0 0 0 0.125em rgba(0,0,0,0.2);
+input:focus,
+textarea:focus {
+  border-color: transparent;
+  -webkit-box-shadow: 0 0 0 0.125em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 0.125em rgba(0, 0, 0, 0.2);
 }
 
 .logo {
-
   display: flex;
   justify-content: center;
-  margin-top: 5rem; 
+  margin-top: 5rem;
   img {
     width: 200px;
-    height: 100%;
+    height: 200px;
   }
+}
+
+/*
+*
+* Headings
+*
+*/
+.title {
+  color: #363636;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.125;
+}
+
+.subtitle {
+  color: #4a4a4a;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.subtitle:not(:last-child), .title:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.has-text-centered {
+  text-align: center!important;
+}
+
+/*
+*
+* Hero
+*
+*/
+
+.hero {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: url('/assets/images/Stormtrooper-BG.png') no-repeat;
+  background-size: contain;
+  background-position: center top;
+  
+  .hero-body {
+    padding: 35vh 1.5rem 20vh;
+
+    .title {
+      margin-top: 4.5rem;
+      font-size: 2.5rem;
+      color: hsla(0,0%,100%,.7);
+      text-transform: uppercase;
+      font-size: 40px;
+      font-weight: 400;
+      letter-spacing: 40px;
+      color: #fff;
+    }
+
+    .subtitle {
+      color: hsla(0,0%,100%,.35);
+      margin-top: 0;
+      position: relative;
+      font-size: 19px;
+      font-weight: 300;
+      line-height: 1.2;
+    }
+  }
+}
+
+/*
+*
+* Navbar
+*
+*/
+
+.navbar {
+  background: transparent;
+  padding: 0;
+  .nav-item {
+    color: hsla(0,0%,100%,.7);
+    font-size: 11px;
+    letter-spacing: 2px;
+    line-height: 55px;
+    text-transform: uppercase;
+    margin: 0;
+
+    &.active a, &:hover a {      
+      color: #fff !important;
+    }
+  }
+}
+
+.navbar-brand {
+  .nav-item {
+    color: hsla(0,0%,100%,.7);
+    font-size: 11px;
+    letter-spacing: 2px;
+    line-height: 75px;
+    text-transform: uppercase;    
+    padding: .5rem 1.75rem;
+
+    img {
+      max-height: 50px;
+      transition: all .3s ease-in-out;
+    }
+  }
+}
+
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {      
+    color: hsla(0,0%,100%,.7);
+    padding: .5rem 1.75rem;
+  }
+}
+
+.nav-item, .nav-link {
+  align-items: center;
+  display: flex;
+}
+
+@media screen and (min-width: 1024px){
+  .navbar-menu {
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+}
+
+.fa {
+  padding: .5rem;
+  font-size: 1.5rem;
+  color: rgba(255,255,255,.7);
+
+  &:hover {    
+    color: #fff;
+  }
+  
 }

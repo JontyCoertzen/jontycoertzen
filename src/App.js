@@ -1,37 +1,34 @@
 import React, { Component } from 'react';
 import './styles/css/App.css';
 
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
+
 class App extends Component {
-  render() {
-    return (
-      <div>
-        <div className="container logo">
-          <img src="assets/images/head-logo.png"/>
-        </div>     
+    render() {
+        return (
+            <div>
+                {/* <Navigation /> */}
 
-
-        <Footer />
-      </div>
-    );
-  }
+                <section className="hero">
+                    <div className="hero-body">
+                        <div className="container">
+                            <h1 className="title animated slideInUp has-text-centered">
+                                &nbsp;Jonty <br/> &nbsp;Coertzen
+                            </h1>
+                            <h2 className="subtitle animated slideInUp has-text-centered">
+                                Programmer | Gamer | Photographer
+                            </h2>
+                        </div>
+                    </div>
+                </section>
+ 
+                <Footer />
+            </div>
+        );
+    }
 }
 
-class Navigation extends Component {
-  render() {
-    return ;
-  }
-}
 
-class Footer extends Component {
-  render() {
-    return (
-      <footer class="footer">
-        <div class="container">
-          <span class="text-muted">Place sticky footer content here.</span>
-        </div>
-      </footer>
-    )
-  }
-}
 
 export default App;
